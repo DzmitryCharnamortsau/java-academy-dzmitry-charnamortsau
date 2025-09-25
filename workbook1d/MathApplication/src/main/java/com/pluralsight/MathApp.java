@@ -10,5 +10,8 @@ public class MathApp {
         double truckPrice = 49999.99;
         double smallestPrice = Math.min(carPrice, truckPrice);
         System.out.println("The smallest price is " + smallestPrice);
+        double myNumber = Math.random() * 10;
+        System.out.println(myNumber);
+
     }
 }
