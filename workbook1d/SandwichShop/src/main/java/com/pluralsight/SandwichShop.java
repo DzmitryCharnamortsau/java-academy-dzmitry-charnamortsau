@@ -18,6 +18,22 @@ public class SandwichShop {
             System.out.println("Invalid size, try again");
             return;
         }
+        System.out.println("Would you like your sandwich loaded? Enter 'yes' or 'no'");
+        String loaded = myScanner.nextLine();
+        if (loaded.equals("yes")){
+            if (sandwichSize.equals("regular")){
+                totalPrice += 1.00;
+                System.out.println("It's going to be a 1$ extra");
+            } else if (sandwichSize.equals("large")){
+                totalPrice +=1.75;
+                System.out.println("It's going to be 1.75$ extra");
+            }
+        } else if (loaded.equals("no")) {
+            System.out.println("There's no additional cost");
+        } else {
+            System.out.println("Invalid input, please enter 'yes' or 'no'");
+            return;
+        }
         System.out.println("Please, enter your age in order to check if you're eligible for a discount");
         int age = myScanner.nextInt();
         if (age <=17){
