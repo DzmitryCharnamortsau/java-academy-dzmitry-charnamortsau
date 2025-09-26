@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="MathApplication" />
         <module name="SandwichShop" />
+        <module name="Demo-Methods" />
       </profile>
     </annotationProcessing>
   </component>
