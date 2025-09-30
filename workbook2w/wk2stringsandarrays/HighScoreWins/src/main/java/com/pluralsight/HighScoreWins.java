@@ -1,6 +1,5 @@
 package com.pluralsight;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class HighScoreWins {
     public static void main(String[] args){
@@ -16,7 +15,7 @@ public class HighScoreWins {
             System.out.println("Winner: " + teams[0]);
         } else if (homeScore < visitorScore) {
             System.out.println("Winner: " + teams[1]);
-          } else {
+        } else {
             System.out.println("It's a tie");
         } input.close();
     }
