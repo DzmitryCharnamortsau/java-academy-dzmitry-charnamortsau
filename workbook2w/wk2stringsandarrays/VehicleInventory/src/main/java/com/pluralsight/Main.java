@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Vehicle[] cars = new Vehicle[20];
+        Vehicle[] cars = new Vehicle[6];
         cars[0] = new Vehicle(101121, "Ford Explorer", "Red", 45000, 13500);
         cars[1] = new Vehicle(101122, "Toyota Camry", "Blue", 60000, 11000);
         cars[2] = new Vehicle(101123, "Chevrolet Malibu", "Black", 50000, 9700);
@@ -21,8 +21,22 @@ public class Main {
         System.out.println("Enter your command: ");
         int command = read.nextInt();
         if (command == 1){
-            String first = cars[0].getMakeModel();
-            System.out.println(first);
+            for (int i = 0; i< cars.length; i++){
+                String first = cars[i].getMakeModel();
+                System.out.println(first);
+            }
+        } else if (command == 3) {
+            for (int i = 0; i< cars.length; i++){
+                Float third = cars[i].getPrice();
+                System.out.println(third);
+            }
+        } else if (command == 4){
+            for(int i = 0; i<cars.length; i++){
+                String fourth = cars[i].getColor();
+                System.out.println(fourth);
+            }
+        } else {
+            System.out.println("Wrong command");
         }
     }
 }
