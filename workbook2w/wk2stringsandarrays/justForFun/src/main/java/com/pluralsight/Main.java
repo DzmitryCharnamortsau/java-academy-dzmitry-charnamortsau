@@ -33,4 +33,7 @@ public class Main {
     public static void greetHero(String greeting){
         System.out.println(greeting);
     }
+    int x = 50;
+
+
 }

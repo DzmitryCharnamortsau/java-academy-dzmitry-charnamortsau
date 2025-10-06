@@ -21,5 +21,6 @@ public class Main {
             System.out.println("Invalid value");
         }
         myScanner.close();
+
     }
 }
