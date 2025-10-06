@@ -63,4 +63,12 @@ public class Book {
         this.checkedOutTo = "";
         isCheckedOut = false;
     }
+    public void display() {
+        System.out.print("ID: " + id + ", ISBN: " + isbn + ", Title: " + title + ", Checked out to: ");
+        if (isCheckedOut){
+            System.out.println(checkedOutTo);
+        }else{
+            System.out.println("No");
+        }
+    }
 }
