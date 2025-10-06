@@ -16,7 +16,7 @@ public class Main {
                     "Fall in love with becoming.",
                     "Your pace is still progress.",
                     "Let go to grow.",
-                    "Purpose over perfection."};
+                    "Purpose over perfection"};
             System.out.print("Select a quote (select #1 - #10): ");
             int index = input.nextInt();
             index--;
