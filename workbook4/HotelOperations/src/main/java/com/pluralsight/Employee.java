@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Employee {
@@ -9,7 +11,9 @@ public class Employee {
     private double payRate;
     private double hoursWorked;
     private double startTime;
-    private double finishTime;
+    private LocalDateTime punchInTime;
+    private LocalDateTime punchOutTime;
+    private double endTime;
     private Scanner scanner = new Scanner(System.in);
 
     public Employee(int employeeID, String name, String department, double payRate, double hoursWorked){
@@ -38,14 +42,27 @@ public class Employee {
         }
         return overtimeHours;
     }
+    public void punchIn(double time){
+        startTime = time;
+        System.out.println("You're started at " + startTime);
+    }
+    public void punchOut(double time) {
+        endTime = time;
+        System.out.println("You're finished at " + endTime);
+        double totalHours = endTime - startTime;
+        System.out.println("You worked " + totalHours + " hours today");
+    }
     public void punchIn(){
-        System.out.println("Enter your start time: ");
-        startTime = scanner.nextDouble();
+        punchInTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd | HH:mm:ss");
+        String formattedDateTime = punchInTime.format(formatter);
+        System.out.println("You punched in at " + formattedDateTime);
+
     }
     public void punchOut(){
-        System.out.println("Enter your finish time");
-        finishTime = scanner.nextDouble();
-        double hours = finishTime - startTime;
-        System.out.println("You worked " + hours);
+        punchOutTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd | HH:mm:ss");
+        String formattedDateTime = punchOutTime.format(formatter);
+        System.out.println("You punched out at " + formattedDateTime);
     }
 }
