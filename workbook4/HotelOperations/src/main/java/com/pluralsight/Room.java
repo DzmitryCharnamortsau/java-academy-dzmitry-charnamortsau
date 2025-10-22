@@ -29,4 +29,21 @@ public class Room {
     public boolean isAvailable() {
         return isAvailable;
     }
+    public void checkIn(){
+        if(isOccupied && isDirty){
+            System.out.println("Room is checked in");
+        }
+
+    }
+    public void checkOut(){
+        if(isDirty) {
+            System.out.println("Room must be cleaned before checking in");
+        }
+    }
+    public void cleanRoom(){
+        if (isOccupied == false && isDirty == false && isAvailable){
+            System.out.println("This room is available for check in");
+        }
+
+    }
 }
